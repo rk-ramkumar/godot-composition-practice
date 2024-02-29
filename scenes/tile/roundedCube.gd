@@ -1,7 +1,7 @@
 @tool
 class_name TileModel extends CSGPolygon3D
 
-@export var root: RigidBody3D
+@export var root: Node3D
 
 var offset = 2
 var borderRadius = 0.2
@@ -34,7 +34,8 @@ func _updateModel():
 
 	set_polygon(points)
 	
-	root.setCollisionShape()
+#	root.setCollisionShape()
+
 
 func _getArcPoints(center: Vector2, radius: float, angleFrom: int, angleTo: int) -> PackedVector2Array:
 	var segments = 16
