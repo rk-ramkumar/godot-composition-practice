@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8oglrm7uppr3"]
+
+[ext_resource type="PackedScene" uid="uid://d4csrb3oe4q26" path="res://scenes/tile/tile.tscn" id="1_3pw8e"]
+[ext_resource type="Script" path="res://scenes/face.gd" id="2_1rgs5"]
+[ext_resource type="Texture2D" uid="uid://c08l617p6jfgk" path="res://icon.svg" id="3_e2xs3"]
+[ext_resource type="Script" path="res://scenes/gameObject.gd" id="3_hodlh"]
+
+[node name="countTile" type="Node3D"]
+
+[node name="tile" parent="." instance=ExtResource("1_3pw8e")]
+
+[node name="Interaction" type="Node3D" parent="tile"]
+script = ExtResource("3_hodlh")
+
+[node name="Face" type="Node" parent="."]
+script = ExtResource("2_1rgs5")
+face = 1
+texture = ExtResource("3_e2xs3")
+
+[editable path="tile"]
