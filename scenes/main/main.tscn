@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://mf4cekootcx"]
+[gd_scene load_steps=8 format=3 uid="uid://mf4cekootcx"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5xodn"]
 [ext_resource type="PackedScene" uid="uid://d4csrb3oe4q26" path="res://scenes/tile/tile.tscn" id="1_happ4"]
+[ext_resource type="Script" path="res://scenes/gameObject.gd" id="3_vl1jb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vw510"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,5 +44,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91097, 0)
 
 [node name="roundedCube" parent="RigidBody3D" index="1" node_paths=PackedStringArray("root")]
 root = NodePath("..")
+
+[node name="gameObject" type="Node3D" parent="RigidBody3D"]
+script = ExtResource("3_vl1jb")
 
 [editable path="RigidBody3D"]
