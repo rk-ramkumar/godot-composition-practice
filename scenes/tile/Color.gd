@@ -1,11 +1,10 @@
 class_name TileColor extends Node
 
-@export var model: TileModel
+@export var model: Node3D
 @export var color: Color
 
 func _ready():
-	if !model:
-		model = get_parent()
+	model = $"../roundedCube"
 	
 	setColor(color)
 

@@ -9,7 +9,7 @@ var borderRadius = 0.2
 func _ready():
 	root = get_parent()
 	_updateModel()
-	pass
+	
 
 func _updateModel():
 	var points = PackedVector2Array()
@@ -36,7 +36,7 @@ func _updateModel():
 
 	set_polygon(points)
 	
-#	root.setCollisionShape()
+	root.setCollisionShape()
 
 
 func _getArcPoints(center: Vector2, radius: float, angleFrom: int, angleTo: int) -> PackedVector2Array:
