@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://mf4cekootcx"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5xodn"]
-[ext_resource type="PackedScene" uid="uid://d4csrb3oe4q26" path="res://scenes/tile/tile.tscn" id="1_happ4"]
-[ext_resource type="Script" path="res://scenes/gameObject.gd" id="3_vl1jb"]
+[ext_resource type="PackedScene" uid="uid://ctfoll05smk5y" path="res://scenes/tile/numberTile.tscn" id="2_ung2c"]
+[ext_resource type="PackedScene" uid="uid://b8oglrm7uppr3" path="res://scenes/tile/countTile.tscn" id="3_cnk3x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vw510"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -39,13 +39,8 @@ material = SubResource("StandardMaterial3D_vbi68")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.479703, 0.877431, 0, -0.877431, 0.479703, 0, 8.42904, 3.79615)
 
-[node name="RigidBody3D" parent="." instance=ExtResource("1_happ4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91097, 0)
+[node name="numberTile" parent="." instance=ExtResource("2_ung2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25016, 2.96336, -1.33287)
 
-[node name="roundedCube" parent="RigidBody3D" index="1" node_paths=PackedStringArray("root")]
-root = NodePath("..")
-
-[node name="interactions" type="Node3D" parent="RigidBody3D"]
-script = ExtResource("3_vl1jb")
-
-[editable path="RigidBody3D"]
+[node name="countTile" parent="." instance=ExtResource("3_cnk3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0251, 2.8725, -0.91087)

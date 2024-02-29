@@ -9,7 +9,6 @@ var borderRadius = 0.2
 func _ready():
 	root = get_parent()
 	_updateModel()
-	
 
 func _updateModel():
 	var points = PackedVector2Array()
