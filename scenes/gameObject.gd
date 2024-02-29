@@ -1,4 +1,4 @@
-class_name Interaction extends Node3D
+class_name interaction extends Node3D
 
 @export var intractions: Dictionary = {
 	draggable =  true,

@@ -19,16 +19,16 @@ func _ready():
 	curFace = faces[face].call()
 	get_parent().call_deferred("add_child", curFace)
 
-func buildlabel() -> LabelComp:
-	var label = LabelComp.new()
+func buildlabel() -> labelFace:
+	var label = labelFace.new()
 	label.name = "label"
 	label.fontSize = fontSize
 	label.fontColor = fontColor
 	
 	return label
 	
-func buildSprite() -> SpriteComp:
-	var sprite = SpriteComp.new()
+func buildSprite() -> spriteFace:
+	var sprite = spriteFace.new()
 	sprite.name = "sprite"
 	sprite.image = texture
 	

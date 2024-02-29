@@ -1,4 +1,4 @@
-class_name LabelComp extends Label3D
+class_name labelFace extends Label3D
 
 @onready var parent = get_parent()
 var fontSize = 80

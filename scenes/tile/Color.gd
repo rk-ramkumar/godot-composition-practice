@@ -5,7 +5,6 @@ var model
 
 func _ready():
 	model = get_parent().get_node("body")
-	print("Sd", model)
 	color = get_parent().color
 	
 	setColor(color)

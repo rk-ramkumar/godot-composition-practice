@@ -1,4 +1,4 @@
-class_name SpriteComp extends Sprite3D
+class_name spriteFace extends Sprite3D
 
 var image 
 

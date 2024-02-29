@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4csrb3oe4q26"]
+[gd_scene load_steps=7 format=3 uid="uid://d4csrb3oe4q26"]
 
 [ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="1_ui6a2"]
 [ext_resource type="Script" path="res://scenes/tile/Color.gd" id="2_incu6"]
 [ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="3_m4fvo"]
+[ext_resource type="Script" path="res://scenes/gameObject.gd" id="4_mcotv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u75tp"]
 size = Vector3(2, 1, 2)
@@ -11,7 +12,7 @@ size = Vector3(2, 1, 2)
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 
-[node name="tile" type="RigidBody3D"]
+[node name="body" type="RigidBody3D"]
 script = ExtResource("3_m4fvo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -29,3 +30,6 @@ root = NodePath("..")
 
 [node name="color" type="Node" parent="."]
 script = ExtResource("2_incu6")
+
+[node name="interaction" type="Node3D" parent="."]
+script = ExtResource("4_mcotv")
