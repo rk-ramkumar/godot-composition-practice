@@ -6,7 +6,7 @@ var fontColor = modulate
 
 
 func _ready():
-	name = "face"
+	set_name.call_deferred("face")
 	modulate = fontColor
 	font_size = fontSize
 	position.y = 0.3

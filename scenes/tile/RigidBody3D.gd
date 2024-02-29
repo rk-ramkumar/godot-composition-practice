@@ -6,20 +6,18 @@ var value:
 	get:
 		return value
 	set(newValue):
-		_updateBody()
 		value = newValue
+		_updateBody()
 @export var pictures: Array[String]
-@onready var collisionShape = $CollisionShape3D
 @export var color: Color = Color("white")
+@onready var collisionShape = $CollisionShape3D
 @onready var body = $body
 
-#@onready var face = $face
 var collisionOffset = 2
-func _ready():
-	_updateBody()
 
 func _updateBody():
-	print(get_parent().get_children())
+	print(get_parent().get_children(), value)
+	$"../face".updateFace()
 	updateSize()
 	body._updateModel()
 
@@ -36,7 +34,7 @@ func _on_dragable_drag_move(node, cast):
 	position = Vector3(cast.position.x, 2.5, cast.position.z)
   
 func _on_dragable_drag_stop(node):
-	_updateBody()
+	value = 10
 	
 func connectDragEvents(dragable):
 #	dragable.connect("drag_start", _on_dragable_drag_start)

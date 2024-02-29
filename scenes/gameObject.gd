@@ -10,5 +10,5 @@ func _ready():
 		var draggable = Draggable.new()
 		draggable.name = "draggable"
 		get_parent().connectDragEvents(draggable)
-		get_parent().call_deferred("add_child", draggable)
+		add_sibling.call_deferred(draggable)
 	

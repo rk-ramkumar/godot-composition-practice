@@ -40,7 +40,7 @@ material = SubResource("StandardMaterial3D_vbi68")
 transform = Transform3D(1, 0, 0, 0, 0.479703, 0.877431, 0, -0.877431, 0.479703, 0, 8.42904, 3.79615)
 
 [node name="numberTile" parent="." instance=ExtResource("2_ung2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25016, 2.96336, -1.33287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
 
 [node name="countTile" parent="." instance=ExtResource("3_cnk3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0251, 2.8725, -0.91087)
