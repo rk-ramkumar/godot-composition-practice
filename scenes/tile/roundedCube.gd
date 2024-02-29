@@ -1,13 +1,15 @@
 @tool
 class_name TileModel extends CSGPolygon3D
 
-@export var root: Node3D
+@export var root: Node3D 
 
 var offset = 2
 var borderRadius = 0.2
-
+	
 func _ready():
+	root = get_parent()
 	_updateModel()
+	pass
 
 func _updateModel():
 	var points = PackedVector2Array()
