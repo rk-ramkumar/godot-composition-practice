@@ -4,12 +4,14 @@ class_name labelFace extends Label3D
 var fontSize = 80
 var fontColor = modulate
 
+
 func _ready():
+	name = "face"
 	modulate = fontColor
 	font_size = fontSize
 	position.y = 0.3
 	billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	updateValue()
+	updateFace()
 
-func updateValue():
+func updateFace():
 	text = str(body.value)
