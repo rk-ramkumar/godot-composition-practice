@@ -1,6 +1,6 @@
 class_name labelFace extends Label3D
 
-@onready var parent = get_parent()
+@onready var body = get_parent().get_node("body")
 var fontSize = 80
 var fontColor = modulate
 
@@ -12,4 +12,4 @@ func _ready():
 	updateValue()
 
 func updateValue():
-	text = str(parent.value)
+	text = str(body.value)

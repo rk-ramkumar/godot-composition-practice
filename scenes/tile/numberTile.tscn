@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctfoll05smk5y"]
 
 [ext_resource type="PackedScene" uid="uid://d4csrb3oe4q26" path="res://scenes/tile/tile.tscn" id="1_p7ulv"]
-[ext_resource type="Script" path="res://scenes/face.gd" id="2_yrawi"]
+[ext_resource type="Script" path="res://scenes/tile/label.gd" id="3_aehvl"]
 
 [node name="numberTile" type="Node3D"]
 
 [node name="body" parent="." instance=ExtResource("1_p7ulv")]
 
-[node name="face" type="Node" parent="."]
-script = ExtResource("2_yrawi")
+[node name="labelFace" type="Label3D" parent="."]
+script = ExtResource("3_aehvl")
 
 [editable path="body"]
