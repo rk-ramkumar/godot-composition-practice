@@ -1,4 +1,4 @@
-extends Node
+class_name TileColor extends Node
 
 @export var model: TileModel
 @export var color: Color

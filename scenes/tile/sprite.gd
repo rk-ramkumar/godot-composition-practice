@@ -1,0 +1,1 @@
+class_name SpriteComp extends Sprite3D
