@@ -1,13 +1,14 @@
-class_name gameObject extends Node3D
+class_name Interaction extends Node3D
 
 @export var intractions: Dictionary = {
-	"draggable": true,
-	"droppable": true
+	draggable =  true,
+	droppable = true
 }
 
 func _ready():
 	if intractions.draggable:
 		var draggable = Draggable.new()
-		print(draggable)
-		get_parent().add_child(draggable)
+		draggable.name = "draggable"
+		get_parent().connectDragEvents(draggable)
+		get_parent().call_deferred("add_child", draggable)
 	

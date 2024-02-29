@@ -37,7 +37,7 @@ size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_vbi68")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.994299, 0.106629, 0, -0.106629, 0.994299, 0, 2.79599, 4.37939)
+transform = Transform3D(1, 0, 0, 0, 0.479703, 0.877431, 0, -0.877431, 0.479703, 0, 8.42904, 3.79615)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("1_happ4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91097, 0)
@@ -45,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91097, 0)
 [node name="roundedCube" parent="RigidBody3D" index="1" node_paths=PackedStringArray("root")]
 root = NodePath("..")
 
-[node name="gameObject" type="Node3D" parent="RigidBody3D"]
+[node name="interactions" type="Node3D" parent="RigidBody3D"]
 script = ExtResource("3_vl1jb")
 
 [editable path="RigidBody3D"]
