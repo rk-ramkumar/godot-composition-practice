@@ -1,9 +1,8 @@
 class_name labelFace extends Label3D
 
-@onready var body = get_parent().get_node("body")
+@onready var bodyNode = get_parent()
 var fontSize = 80
 var fontColor = modulate
-
 
 func _ready():
 	set_name.call_deferred("face")
@@ -14,4 +13,5 @@ func _ready():
 	updateFace()
 
 func updateFace():
-	text = str(body.value)
+	print(get_parent())
+	text = str(bodyNode.value)

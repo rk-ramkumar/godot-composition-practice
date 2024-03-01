@@ -1,5 +1,5 @@
 @tool
-class_name TileModel extends CSGPolygon3D
+class_name body extends CSGPolygon3D
 
 @export var root: Node3D 
 

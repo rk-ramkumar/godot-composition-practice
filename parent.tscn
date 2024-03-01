@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5xt86hkxjuhf"]
+[gd_scene load_steps=2 format=3 uid="uid://c5xt86hkxjuhf"]
 
 [ext_resource type="Script" path="res://Node3D.gd" id="1_033jo"]
-[ext_resource type="Script" path="res://child.gd" id="2_82onx"]
 
 [node name="parent" type="Node3D"]
 
 [node name="Node3D" type="Node3D" parent="."]
 script = ExtResource("1_033jo")
 
-[node name="Node3D" type="Node3D" parent="Node3D"]
-script = ExtResource("2_82onx")
+[node name="child" type="Node3D" parent="Node3D"]

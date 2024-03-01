@@ -13,7 +13,3 @@ var value:
 @export var pickable: bool = true
 @export var droppable: bool = true
 @export var color: Color = Color("white")
-
-
-func _ready():
-	print("parent")

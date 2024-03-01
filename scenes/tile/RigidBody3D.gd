@@ -1,35 +1,41 @@
-extends RigidBody3D
+class_name Tile extends RigidBody3D
+
+
+@onready var collisionShape = $CollisionPolygon3D
+@onready var bodyNode = $body
 
 @export var width: float = 1
 @export var height: float = 1
-@onready var value 
-@onready var color: Color 
-@onready var collisionShape = $CollisionShape3D
-@onready var body = $body
+@export var pictures: Array[String]
+@export var pickable: bool = true
+@export var droppable: bool = true
+@export var color: Color = Color("white")
 
+var value:
+	get:
+		return value
+	set(newValue):
+		value = newValue
+		_updateBody()
 var collisionOffset = 2
-
-func _init():
-	printt("init", get_parent())
 	
-func _ready():
-	printt("ready", get_parent())
-#	value = get_parent().value
-#	color = get_parent().color
+func _init():
+	var collision = CollisionPolygon3D.new()
+	add_child(collision)
 	
 func _updateBody():
-	$"../face".updateFace()
+	$face.updateFace()
 	updateSize()
-	body._updateModel()
+	bodyNode._updateModel()
 
 func updateSize(w = width, h = height):
 	width = w
 	height = h
 	
 func setCollisionShape():
-	var collisionShape = $CollisionShape3D
-	collisionShape.shape = BoxShape3D.new()
-	collisionShape.shape.size = Vector3(width * collisionOffset, 0.5, height * collisionOffset)
+	collisionShape = $CollisionPolygon3D
+	bodyNode = $body
+	collisionShape.polygon = bodyNode.polygon
 
 func _on_dragable_drag_move(node, cast):
 	position = Vector3(cast.position.x, 2.5, cast.position.z)
