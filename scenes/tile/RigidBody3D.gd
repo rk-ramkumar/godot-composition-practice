@@ -2,21 +2,22 @@ extends RigidBody3D
 
 @export var width: float = 1
 @export var height: float = 1
-var value:
-	get:
-		return value
-	set(newValue):
-		value = newValue
-		_updateBody()
-@export var pictures: Array[String]
-@export var color: Color = Color("white")
+@onready var value 
+@onready var color: Color 
 @onready var collisionShape = $CollisionShape3D
 @onready var body = $body
 
 var collisionOffset = 2
 
+func _init():
+	printt("init", get_parent())
+	
+func _ready():
+	printt("ready", get_parent())
+#	value = get_parent().value
+#	color = get_parent().color
+	
 func _updateBody():
-	print(get_parent().get_children(), value)
 	$"../face".updateFace()
 	updateSize()
 	body._updateModel()

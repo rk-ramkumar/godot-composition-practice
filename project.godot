@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/DragDrop3D/plugin.cfg")

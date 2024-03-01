@@ -6,3 +6,6 @@ func _ready():
 	texture = image
 	billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	position.y = 0.2
+
+func updateFace():
+	pass
