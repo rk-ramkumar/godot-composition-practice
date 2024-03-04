@@ -18,7 +18,3 @@ func _on_dragable_drag_start(node):
 func _on_dragable_drag_stop(node):
 	pass
 
-func connectDragEvents(dragable):
-#	dragable.connect("drag_start", _on_dragable_drag_start)
-#	dragable.connect("drag_stop", _on_dragable_drag_stop)
-	dragable.connect("drag_move", _on_dragable_drag_move)
