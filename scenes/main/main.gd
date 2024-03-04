@@ -13,6 +13,7 @@ var tileConfig = {
 var numberConfig = {
 	value = 13,
 	width = 1,
+	color = "blue",	
 	position = {
 		x = -3,
 		y = 0
@@ -20,7 +21,7 @@ var numberConfig = {
 }
 var slotConfig = {
 	value = 10,
-	width = 2,
+	width = 5,
 	color = "green",
 	position = {
 		x = 0,
@@ -33,9 +34,10 @@ var clockConfig = {
 		"minute": 30
 		},
 	width = 2,
+	color = "yellow",
 	position = {
 		x = 3,
-		y = 3
+		y = 5
 	}
 }
 
