@@ -1,7 +1,7 @@
 class_name tile extends gameObject
 
 func _updateBody():
-	$face and $face.updateFace()
+	$face and $face.updateFace(_toString(value))
 	updateSize()
 	$body._updateModel()
 
@@ -18,3 +18,5 @@ func _on_dragable_drag_start(node):
 func _on_dragable_drag_stop(node):
 	pass
 
+func _toString(string) -> String:
+	return str(string)
