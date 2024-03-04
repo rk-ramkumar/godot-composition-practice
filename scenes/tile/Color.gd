@@ -6,6 +6,7 @@ var model
 func _ready():
 	model = get_parent().get_node("body")
 	color = get_parent().color
+	printt(color, model)
 	
 	setColor(color)
 
@@ -17,7 +18,6 @@ func _updateColor() -> void:
 	if model.material is ShaderMaterial:
 		return
 		
-	if model.material:
-		var newMaterial = StandardMaterial3D.new()
-		newMaterial.set_albedo(color)
-		model.material = newMaterial
+	var newMaterial = StandardMaterial3D.new()
+	newMaterial.set_albedo(color)
+	model.material = newMaterial

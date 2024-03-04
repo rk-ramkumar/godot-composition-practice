@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5xt86hkxjuhf"]
+[gd_scene load_steps=3 format=3 uid="uid://c5xt86hkxjuhf"]
 
 [ext_resource type="Script" path="res://Node3D.gd" id="1_033jo"]
+[ext_resource type="Script" path="res://parent.gd" id="1_upm1s"]
 
 [node name="parent" type="Node3D"]
+script = ExtResource("1_upm1s")
 
 [node name="Node3D" type="Node3D" parent="."]
-script = ExtResource("1_033jo")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="child" type="Node3D" parent="Node3D"]
+script = ExtResource("1_033jo")

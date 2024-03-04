@@ -35,4 +35,6 @@ size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_vbi68")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.479703, 0.877431, 0, -0.877431, 0.479703, 0, 8.42904, 3.79615)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5, 0)
+projection = 1
+size = 13.0

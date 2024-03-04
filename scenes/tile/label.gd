@@ -13,5 +13,5 @@ func _ready():
 	updateFace()
 
 func updateFace():
-	print(get_parent())
+	bodyNode = get_parent()
 	text = str(bodyNode.value)

@@ -22,3 +22,9 @@ DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/DragDrop3D/plugin.cfg")
+
+[layer_names]
+
+3d_physics/layer_1="ground"
+3d_physics/layer_2="tile"
+3d_physics/layer_3="slot"

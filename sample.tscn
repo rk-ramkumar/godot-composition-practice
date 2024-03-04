@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scenes/tile/label.gd" id="5_rt7w6"]
 
 [node name="tile" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v6ksu")
 
 [node name="body" type="CSGPolygon3D" parent="." node_paths=PackedStringArray("root")]

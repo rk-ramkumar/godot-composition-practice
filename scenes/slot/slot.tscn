@@ -1,40 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4csrb3oe4q26"]
+[gd_scene load_steps=5 format=3 uid="uid://dcel870i7qtg6"]
 
-[ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="1_ui6a2"]
-[ext_resource type="Script" path="res://scenes/tile/Color.gd" id="2_incu6"]
-[ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="3_m4fvo"]
-[ext_resource type="Script" path="res://scenes/Interactions.gd" id="5_7w6so"]
-[ext_resource type="Script" path="res://scenes/tile/label.gd" id="5_flrcv"]
+[ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="1_gomh1"]
+[ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="1_pjyvy"]
+[ext_resource type="Script" path="res://scenes/tile/Color.gd" id="2_wosmt"]
+[ext_resource type="Script" path="res://scenes/Interactions.gd" id="3_tjo4f"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4fv6"]
-uv1_scale = Vector3(0.2, 0.2, 0.2)
-uv1_triplanar = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ltcyc"]
-
-[node name="tile" type="RigidBody3D"]
-collision_layer = 3
-script = ExtResource("3_m4fvo")
+[node name="slot" type="RigidBody3D"]
+collision_mask = 3
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_pjyvy")
+pickable = false
+color = Color(0.568627, 0.231373, 0, 1)
 
 [node name="body" type="CSGPolygon3D" parent="." node_paths=PackedStringArray("root")]
-transform = Transform3D(1, 0, 0, 0, -8.74228e-08, 2, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 polygon = PackedVector2Array(-0.8, -1, -1, -1, -0.999239, -1.01743, -0.996325, -1.03816, -0.992252, -1.05513, -0.985437, -1.07492, -0.97659, -1.09389, -0.967734, -1.10893, -0.955429, -1.12586, -0.941421, -1.14142, -0.928558, -1.15321, -0.911839, -1.16581, -0.896962, -1.17492, -0.878146, -1.1841, -0.858474, -1.19126, -0.841582, -1.19563, -0.820906, -1.1989, -0.8, -1.2, 0.8, -1.2, 0.8, -1, 0.8, -1.2, 0.817431, -1.19924, 0.838162, -1.19633, 0.855127, -1.19225, 0.874921, -1.18544, 0.893894, -1.17659, 0.908928, -1.16773, 0.925864, -1.15543, 0.941421, -1.14142, 0.953209, -1.12856, 0.965808, -1.11184, 0.974924, -1.09696, 0.984101, -1.07815, 0.991261, -1.05847, 0.99563, -1.04158, 0.998904, -1.02091, 1, -1, 1, 0.8, 0.8, 0.8, 1, 0.8, 0.999239, 0.817431, 0.996325, 0.838162, 0.992252, 0.855127, 0.985437, 0.874921, 0.97659, 0.893894, 0.967734, 0.908928, 0.955429, 0.925864, 0.941421, 0.941421, 0.928558, 0.953209, 0.911839, 0.965808, 0.896962, 0.974924, 0.878146, 0.984101, 0.858474, 0.991261, 0.841582, 0.99563, 0.820906, 0.998904, 0.8, 1, -0.8, 1, -0.8, 0.8, -0.8, 1, -0.817431, 0.999239, -0.838162, 0.996325, -0.855127, 0.992252, -0.874921, 0.985437, -0.893894, 0.97659, -0.908928, 0.967734, -0.925864, 0.955429, -0.941421, 0.941421, -0.953209, 0.928558, -0.965808, 0.911839, -0.974924, 0.896962, -0.984101, 0.878146, -0.991261, 0.858474, -0.99563, 0.841582, -0.998904, 0.820906, -1, 0.8, -1, -1)
 depth = 0.5
-smooth_faces = true
-material = SubResource("StandardMaterial3D_b4fv6")
-script = ExtResource("1_ui6a2")
+script = ExtResource("1_gomh1")
 root = NodePath("..")
 
 [node name="collisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
-shape = SubResource("BoxShape3D_ltcyc")
-
-[node name="color" type="Node" parent="."]
-script = ExtResource("2_incu6")
-
-[node name="face" type="Label3D" parent="."]
-modulate = Color(0, 0, 0, 1)
-script = ExtResource("5_flrcv")
 
 [node name="interaction" type="Node3D" parent="."]
-script = ExtResource("5_7w6so")
+script = ExtResource("3_tjo4f")
+
+[node name="color" type="Node" parent="."]
+script = ExtResource("2_wosmt")
+
+[connection signal="body_entered" from="." to="interaction" method="_on_slot_body_entered"]

@@ -1,4 +1,4 @@
-extends Node3D
+class_name gameObject extends Node3D
 
 
 @export var width: float = 1
@@ -8,8 +8,10 @@ var value:
 		return value
 	set(newValue):
 		value = newValue
-		$body._updateBody()
-@export var pictures: Array[String]
+		_updateBody()
 @export var pickable: bool = true
 @export var droppable: bool = true
 @export var color: Color = Color("white")
+
+func _updateBody():
+	pass

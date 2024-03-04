@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="2_54uuy"]
 [ext_resource type="Script" path="res://scenes/tile/Color.gd" id="3_77fwl"]
 [ext_resource type="Script" path="res://scenes/tile/label.gd" id="3_aehvl"]
-[ext_resource type="Script" path="res://scenes/gameObject.gd" id="3_qn51l"]
+[ext_resource type="Script" path="res://scenes/Interactions.gd" id="5_vmtl8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u75tp"]
 size = Vector3(2, 1, 2)
@@ -37,7 +37,7 @@ root = NodePath("..")
 script = ExtResource("3_77fwl")
 
 [node name="interaction" type="Node3D" parent="tile"]
-script = ExtResource("3_qn51l")
+script = ExtResource("5_vmtl8")
 
 [node name="labelFace" type="Label3D" parent="."]
 script = ExtResource("3_aehvl")
