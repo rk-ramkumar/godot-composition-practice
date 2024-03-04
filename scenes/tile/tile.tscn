@@ -15,6 +15,8 @@ size = Vector3(2, 0.5, 2)
 
 [node name="tile" type="RigidBody3D"]
 collision_layer = 3
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_c0uxp")
 
 [node name="body" type="CSGPolygon3D" parent="." node_paths=PackedStringArray("root")]
@@ -39,3 +41,5 @@ script = ExtResource("5_flrcv")
 
 [node name="interaction" type="Node3D" parent="."]
 script = ExtResource("5_7w6so")
+
+[connection signal="body_entered" from="." to="interaction" method="_on_tile_body_entered"]

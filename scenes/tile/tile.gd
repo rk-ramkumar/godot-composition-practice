@@ -18,5 +18,5 @@ func _on_dragable_drag_start(node):
 func _on_dragable_drag_stop(node):
 	pass
 
-func _toString(string) -> String:
-	return str(string)
+func _toString(value) -> String:
+	return str(value)

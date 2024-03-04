@@ -1,8 +1,8 @@
 class_name clockTile extends tile
 
 
-func _toString(string):
-	return formatTime(string)
+func _toString(value):
+	return formatTime(value)
 
 func formatTime(input) -> String:
 	var hour = int(input["hour"]) % 12

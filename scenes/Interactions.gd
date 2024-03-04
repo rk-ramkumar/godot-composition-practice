@@ -8,3 +8,7 @@ func _ready():
 
 func _on_slot_body_entered(body):
 	print(body)
+
+
+func _on_tile_body_entered(body):
+	print(body)
