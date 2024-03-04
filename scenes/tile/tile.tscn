@@ -10,7 +10,7 @@
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hd6r4"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwh0v"]
 size = Vector3(2, 0.5, 2)
 
 [node name="tile" type="RigidBody3D"]
@@ -28,7 +28,7 @@ root = NodePath("..")
 
 [node name="collisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
-shape = SubResource("BoxShape3D_hd6r4")
+shape = SubResource("BoxShape3D_vwh0v")
 
 [node name="color" type="Node" parent="."]
 script = ExtResource("2_incu6")
