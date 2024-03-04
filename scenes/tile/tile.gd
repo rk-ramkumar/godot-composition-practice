@@ -1,11 +1,22 @@
-extends Node3D
+class_name tile extends gameObject
 
+func _updateBody():
+	$face and $face.updateFace(_toString(value))
+	updateSize()
+	$body._updateModel()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func updateSize(w = width, h = height):
+	width = w
+	height = h
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _on_dragable_drag_move(node, cast):
+	position = Vector3(cast.position.x, 2.5, cast.position.z)
+ 
+func _on_dragable_drag_start(node):
 	pass
+
+func _on_dragable_drag_stop(node):
+	pass
+
+func _toString(string) -> String:
+	return str(string)

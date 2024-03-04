@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ctfoll05smk5y"]
 
 [ext_resource type="Script" path="res://scenes/tile/gameObject.gd" id="1_5t0du"]
-[ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="1_bmvdt"]
+[ext_resource type="Script" path="res://scenes/tile/tile.gd" id="1_bmvdt"]
 [ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="2_54uuy"]
 [ext_resource type="Script" path="res://scenes/tile/Color.gd" id="3_77fwl"]
 [ext_resource type="Script" path="res://scenes/tile/label.gd" id="3_aehvl"]

@@ -12,7 +12,7 @@ var tileConfig = {
 }
 var numberConfig = {
 	value = 13,
-	width = 2,
+	width = 1,
 	position = {
 		x = -3,
 		y = 0
@@ -30,7 +30,7 @@ var slotConfig = {
 var clockConfig = {
 	value = {
 		"hour": 1,
-		"minute": 09
+		"minute": 30
 		},
 	width = 2,
 	position = {
@@ -40,14 +40,26 @@ var clockConfig = {
 }
 
 func _ready():
-	var tile = tileScene.instantiate()
-	_setConfig(tile, tileConfig)
+	var tileIns = tileScene.instantiate()
+	_setConfig(tileIns, tileConfig)
 	
-	var slot = slotScene.instantiate()
-	_setConfig(slot, slotConfig)
+	var slotIns = slotScene.instantiate()
+	_setConfig(slotIns, slotConfig)
 	
-	add_child(slot)
-	add_child(tile)
+	var numberIns = tileScene.instantiate()
+	numberIns.name = "numberTile"
+	numberIns.set_script(numberTile)
+	_setConfig(numberIns, numberConfig)
+	
+	var clockIns = tileScene.instantiate()
+	clockIns.name = "clockTile"
+	clockIns.set_script(clockTile)
+	_setConfig(clockIns, clockConfig)
+	
+	add_child(clockIns)
+	add_child(numberIns)
+	add_child(slotIns)
+	add_child(tileIns)
 
 func _setConfig(node, config):
 	node.value = config.value

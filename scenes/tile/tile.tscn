@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://d4csrb3oe4q26"]
 
+[ext_resource type="Script" path="res://scenes/tile/tile.gd" id="1_c0uxp"]
 [ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="1_ui6a2"]
 [ext_resource type="Script" path="res://scenes/tile/Color.gd" id="2_incu6"]
-[ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="3_m4fvo"]
 [ext_resource type="Script" path="res://scenes/Interactions.gd" id="5_7w6so"]
 [ext_resource type="Script" path="res://scenes/tile/label.gd" id="5_flrcv"]
 
@@ -10,11 +10,12 @@
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ltcyc"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_hd6r4"]
+size = Vector3(2, 0.5, 2)
 
 [node name="tile" type="RigidBody3D"]
 collision_layer = 3
-script = ExtResource("3_m4fvo")
+script = ExtResource("1_c0uxp")
 
 [node name="body" type="CSGPolygon3D" parent="." node_paths=PackedStringArray("root")]
 transform = Transform3D(1, 0, 0, 0, -8.74228e-08, 2, 0, -1, -4.37114e-08, 0, 0, 0)
@@ -27,7 +28,7 @@ root = NodePath("..")
 
 [node name="collisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
-shape = SubResource("BoxShape3D_ltcyc")
+shape = SubResource("BoxShape3D_hd6r4")
 
 [node name="color" type="Node" parent="."]
 script = ExtResource("2_incu6")

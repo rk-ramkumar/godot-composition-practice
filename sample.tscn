@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bplcykscbgixk"]
 
-[ext_resource type="Script" path="res://scenes/tile/RigidBody3D.gd" id="1_v6ksu"]
+[ext_resource type="Script" path="res://scenes/tile/tile.gd" id="1_v6ksu"]
 [ext_resource type="Script" path="res://scenes/tile/roundedCube.gd" id="2_1pgev"]
 [ext_resource type="Script" path="res://scenes/tile/Color.gd" id="3_sbjoa"]
 [ext_resource type="Script" path="res://addons/DragDrop3D/Draggable.gd" id="4_1ixcd"]
