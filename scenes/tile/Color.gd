@@ -5,9 +5,7 @@ var model
 
 func _ready():
 	model = get_parent().get_node("body")
-	color = get_parent().color
-	printt(color, model)
-	
+	color = get_parent().color	
 	setColor(color)
 
 func setColor(newColor: Color) -> void:
