@@ -30,6 +30,9 @@ func _ready():
 		printerr('Missing DragDropController singletron!')
 	else:
 		var draggable = get_parent()
+		connect("drag_start", draggable._on_dragable_drag_start)
+		connect("drag_stop", draggable._on_dragable_drag_stop)
+		connect("drag_move", draggable._on_dragable_drag_move)
 		draggable.connect("mouse_entered",Callable(self,"mouse_entered").bind(draggable))
 		draggable.connect("mouse_exited",Callable(self,"mouse_exited").bind(draggable))
 		draggable.connect("input_event",Callable(self,"input_event").bind(draggable))

@@ -1,5 +1,4 @@
-class_name gameObject extends Node3D
-
+class_name gameObject extends RigidBody3D
 
 @export var width: float = 1
 @export var height: float = 1

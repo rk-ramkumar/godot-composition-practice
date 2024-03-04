@@ -5,6 +5,7 @@ class_name body extends CSGPolygon3D
 
 var offset = 2
 var borderRadius = 0.2
+var collisionOffset = 2
 	
 func _ready():
 	root = get_parent()
@@ -35,7 +36,7 @@ func _updateModel():
 
 	set_polygon(points)
 	
-	root.setCollisionShape()
+	setCollisionShape()
 
 
 func _getArcPoints(center: Vector2, radius: float, angleFrom: int, angleTo: int) -> PackedVector2Array:
@@ -48,3 +49,8 @@ func _getArcPoints(center: Vector2, radius: float, angleFrom: int, angleTo: int)
 		points.push_back(center + Vector2(cos(point), sin(point)) * radius)
 
 	return points
+
+func setCollisionShape():
+	var collisionShape = $"../collisionShape"
+	collisionShape.shape = BoxShape3D.new()
+	collisionShape.shape.size = Vector3(root.width * collisionOffset, 0.5, root.height * collisionOffset)
