@@ -23,6 +23,15 @@ var value:
 		_updateBody()
 var dummy: bool = false
 
+func _getLabelItem(): 
+	return [{
+		"type": "text",
+		"value": str(value)
+	}]
+	
+func _getSpeechText(): 
+	return str(value)
+	
 func _updateBody():
 	pass
 
